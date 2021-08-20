@@ -32,6 +32,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DLTextEditor">
+      <HintPath>C:\Users\User\Desktop\DLXMLEditor_1_0_1245_source\DLTextEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="MagicLibrary">
+      <HintPath>C:\Users\User\Desktop\DLXMLEditor_1_0_1245_source\MagicLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.GP.eConnect, Version=18.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Software\Kalorik econnect\Microsoft.Dynamics.GP.eConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.GP.eConnect.Serialization, Version=18.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Software\Kalorik econnect\Microsoft.Dynamics.GP.eConnect.Serialization.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +67,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
