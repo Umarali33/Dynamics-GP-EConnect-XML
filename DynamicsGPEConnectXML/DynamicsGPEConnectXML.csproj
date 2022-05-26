@@ -32,8 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DLTextEditor">
-      <HintPath>C:\Users\User\Desktop\DLXMLEditor_1_0_1245_source\DLTextEditor.dll</HintPath>
+    <Reference Include="DLTextEditor, Version=1.1.1245.18783, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLTextEditor.dll</HintPath>
     </Reference>
     <Reference Include="MagicLibrary">
       <HintPath>C:\Users\User\Desktop\DLXMLEditor_1_0_1245_source\MagicLibrary.dll</HintPath>

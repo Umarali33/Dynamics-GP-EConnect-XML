@@ -47,7 +47,7 @@ namespace DynamicsGPEConnectXML
         {
             try
             {
-                string connectionString = "Data Source=" + CmbServerName.SelectedItem.ToString() + "; Integrated Security=True;";
+                string connectionString = "Data Source=" + CmbServerName.SelectedItem.ToString() + "; Initial Catalog=Master;Persist Security Info=False;Integrated Security=SSPI;Min Pool Size=0;Max Pool Size=32767;Pooling=true;";
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
@@ -83,8 +83,9 @@ namespace DynamicsGPEConnectXML
                 eConnectType eConnectType = new eConnectType();
                 var MyConnectionString = "Data Source=" + CmbServerName.SelectedItem.ToString() + ";Initial Catalog=xxxx;Persist Security Info=False;Integrated Security=SSPI;Min Pool Size=0;Max Pool Size=32767;Pooling=true;";
                 SqlConnectionStringBuilder MyConnectionStringBuilder = new SqlConnectionStringBuilder(MyConnectionString) { InitialCatalog = dbList.SelectedItem.ToString() };
-                eConnect.CreateTransactionEntity(MyConnectionStringBuilder.ConnectionString, xmlEcon.Text);
+                string msg=eConnect.CreateTransactionEntity(MyConnectionStringBuilder.ConnectionString, xmlEcon.Text);
                 eConnect.Dispose();
+                excep.Text = msg;
             }
             catch (eConnectException ex)
             {
@@ -145,6 +146,11 @@ namespace DynamicsGPEConnectXML
                 string formated=PrintXML(xmlEcon.Text);
                 xmlEcon.Text = formated;
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            excep.Text = "";
         }
     }
 }
